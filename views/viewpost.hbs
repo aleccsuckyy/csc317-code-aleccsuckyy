@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../public/stylesheets/viewpost.css" />
+  <title>Posts</title>
+</head>
+<body>
+
+  
+<h2 class="post-title">{{currentPost.title}}</h2>
+
+
+ <div class="container">
+  <div class="row">
+    <div class="col-mg-12 col-lg-8">
+      <img id="posted-pic" src="/{{currentPost.photopath}}" alt="placeholder"/>
+    </div>
+    
+        <div class="col-mg-12 col-lg-4">
+          <form class="view-form">
+            <fieldset class="view-fieldset desc">
+              <p class="postUsername" >@{{currentPost.username}}</p>
+              <p class="postDate">{{currentPost.createdAt}}</p>
+              <p class="postDescTitle">Description:</p>
+              <p class="postDesc">{{currentPost.description}}</p>
+            </fieldset>
+          </form>
+
+              {{#if logged}}
+          <form class="view-form">
+            <fieldset class="view-fieldset">
+                <form class="view-form">
+                  <fieldset class="view-fieldset">
+                    <div class="mb-3 labelComment">
+                      <label for="exampleFormControlTextarea1" class="form-label leaveCommentTitle">Leave a Comment: </label>
+                      <textarea 
+                        id="comment-box-text"  
+                        class="commentBox form-control formControl"  
+                        rows="3"
+                        aria-label="with textarea" 
+                        placeholder="Enter comment" >
+                      </textarea>
+                    </div>
+                    <div class="btnPost">
+                      <span id="postBtn">Post</span>
+                    </div>
+                  </fieldset>
+                </form>
+            </fieldset>
+          </form>
+              {{/if}}
+
+          <form class="view-form">
+            <fieldset class="view-fieldset comments">
+              <h2>Comments:</h2>
+              <div id="messages">
+                {{> comment}}
+                {{#each currentPost.comments}}
+                  {{> comment}}
+                {{/each}}
+              </div>
+            </fieldset>
+          </form>
+
+        </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  <script >
+    // for dating structure 
+     document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('p[class=postDate]').forEach((postedDate) => {
+        postedDate.textContent = new Date(postedDate.textContent).toLocaleString();
+      });
+    })
+
+    // add message
+    function addMessage(data) {
+      let template = document.createElement('template');
+      template.innerHTML = 
+      ` <div>
+        <h2>@${data.username}</h2>
+        <p>${data.comment}</p>
+        </div>;`
+
+      document.getElementById('messages').firstChild.before(template.content.firstChild)
+    }
+
+
+
+    // POST comments to db
+    document.getElementById('postBtn').onclick = (event) => {
+    console.log("clicked button")
+
+    let commentText = document.querySelector('#comment-box-text').value;
+    let postId = document.location.pathname.match(/\d+/g).map(Number)[0];
+
+    if(!commentText){
+      return;
+    }
+
+    let fetchOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "Application/json"
+      },
+      body: JSON.stringify({
+        comment: commentText,
+        postId: postId
+      })
+    }
+    fetch('/api/comments/create', fetchOptions)
+      .then((response) => response.json())
+      .then((data) => {
+          location.reload();
+        if(data.code == 1){
+          console.log(data.code)
+          addMessage(data)
+        } else {
+          addFlashFromFrontEnd(data.message, data.status);
+        }
+      })
+      .catch((err) => console.log(err))
+  }
+  </script>
+</body>
+</html>

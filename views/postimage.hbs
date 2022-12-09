@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../public/stylesheets/postimage.css" rel="stylesheet" />
+  <title>Post Image</title>
+</head>
+<body>
+
+  <form class="post-form" method="POST" enctype="multipart/form-data" action="api/posts/createPost">
+      <div class="post-div">
+        
+        <label id="post-title" for="postTitle">Title:</label>
+        <input type="text" name="title" placeholder="Title" id="post-title-input" />
+
+        <label id="post-Description-title" for="postDescription">Description:</label>
+        <textarea type="text" name="description" id="post-Description"></textarea>
+
+      {{!-- <div class="file"> --}}
+        <div #id="file-input-div">
+          <input id="file-input" type="file" id="myFile" name="uploadImage" />
+        </div>
+      {{!-- </div> --}}
+
+
+        <button id="post-button" type="submit">Post</button>
+      </div>
+  </form>
+
+</body>
+</html>

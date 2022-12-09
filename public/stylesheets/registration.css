@@ -1,0 +1,100 @@
+.reg-form,
+.reg-form * {
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro';
+}
+
+/* reg form */
+.reg-form {
+  max-width: 350px;
+  margin: 170px auto 15px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  background: #eeeeee;
+}
+
+/* reg fieldset */
+.reg-fieldset{
+  border: none;
+  padding: 30px;
+}
+
+/* reg headers */
+.reg-form__header,
+.reg-Header-Name
+{
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333333;
+}
+
+/* reg input */
+.reg-input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+
+  border: 2px solid #dddddd;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.5s;
+}
+.reg-input:focus {
+  border-color: #009578;
+}
+
+
+
+/* age confirm */
+.age-confirm-div{
+  text-align: center;
+  color: #333333;
+  margin-bottom: 6px;
+}
+
+/* terms form */
+.terms-form{
+  text-align: center;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+/* reg button */
+.reg-button{
+  width: 100%;
+  background-color: #009578;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+.reg-button:active{
+  background: #008067;
+}
+
+/* to login page */
+.login-link-div{
+  margin-top: 15px;
+  text-align: center;
+}
+.login-link{
+  text-decoration: none;
+  font-size: 0.9em;
+  color: #008067;
+}
+
+
+/* inCorrectInputs */
+.inCorrectInput,
+.emptyInput
+{
+  color: red;
+  text-align: center;
+}
+

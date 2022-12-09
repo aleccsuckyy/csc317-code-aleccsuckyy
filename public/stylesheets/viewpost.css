@@ -1,0 +1,127 @@
+.view-form,
+.view-form * {
+  box-sizing: border-box;
+  /* font-family: 'Source Sans Pro'; */
+  font-family: "Gill Sans", sans-serif;
+}
+
+/* whole form */
+.view-form {
+  max-width: 350px;
+  margin: 0px auto 50px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  background: #eeeeee;
+}
+
+/* fieldset */
+.view-fieldset {
+  padding: 20px;
+  border: none;
+}
+
+
+/* header */
+.posts-header{
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333333;
+}
+
+/* title */
+.post-title{
+  text-align: center;
+  font-size: 32px;
+  /* font-weight: bold; */
+  padding: 10px 0px;
+  margin: 110px 0px 15px 0px;
+  font-family: Verdana, sans-serif;
+}
+
+/* Date */
+.postDate, .postUsername, .postDescTitle, .postDesc {
+  text-align: center;
+  padding-top: 5px;
+}
+
+/* posted pic */
+#posted-pic{
+  width: 100%;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+.pic-sub-info{
+  font-size: 12px;
+}
+
+/*  all p tags */
+p{
+  margin: 0px;
+}
+
+/* post button */
+.btnPost {
+  text-align: center;
+}
+.btnPost span {
+  padding: 10px 30px;
+  color: white;
+  /* font-weight: bold; */
+  background: #009578;
+  /* width: 50%; */
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+
+/* div of textarea and label */
+.labelComment {
+  text-align: center;
+}
+/* label for comments */
+.leaveCommentTitle {
+  font-size: 18px;
+}
+
+/* textarea for comments */
+.commentBox {
+  margin: 15px 0px;
+}
+
+/* title for comments */
+.comments h2 {
+  text-align: center;
+  /* padding-bottom: 5px; */
+}
+
+/* single card comments */
+.singleComment {
+  text-align: center;
+  padding: 8px 0px;
+}
+.singlePostform,
+.singlePostform * {
+  box-sizing: border-box;
+  /* font-family: 'Source Sans Pro'; */
+  font-family: "Gill Sans", sans-serif;
+}
+.singlePostform {
+  max-width: 350px;
+  margin: 20px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  background: #eeeeee;
+}
+.singlePostfieldset {
+  /* padding: 10px; */
+  border: none;
+}
+.singlePostfieldset p {
+  padding: 0px 5px;
+}

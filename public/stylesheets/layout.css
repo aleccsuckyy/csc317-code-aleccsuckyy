@@ -1,0 +1,63 @@
+body {
+  margin-bottom:50px;
+}
+
+/* Login, Register and postImage buttons on Nav */
+.profile:hover  {
+  text-decoration: none;
+  background-color: yellow;
+}
+
+/* card views  */
+#title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* logo nav bar */
+#logo {
+  width: 80px;
+}
+
+#viewPost {
+  text-align: center;
+}
+.cardBody {
+  padding: 10px 0px;
+}
+
+
+.searchBtn {
+  cursor: pointer;
+}
+#searchInput {
+  width: 120px;
+}
+
+.unCollapsed {
+  text-align: center;
+}
+
+nav .navbar-nav li a:hover{
+  color: #009578 !important;
+  }
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  padding: 8px 0px;
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+}
+
+.viewPost {
+  text-decoration: none;
+  color: black ;
+}
+.viewPost:hover{
+  color: #009578;
+  text-decoration: none;
+}

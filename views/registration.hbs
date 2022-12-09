@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    {{!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> --}}
+    <link rel="stylesheet" href="../public/stylesheets/registration.css" />
+    <title>Registration</title>
+  </head>
+  <body>
+
+    <form class="reg-form" >
+      <fieldset class="reg-fieldset" >
+        <!-- form title -->
+        <div class="reg-form__header">Create your account</div>
+
+        <!-- Hidden empty inputs -->
+        <p hidden class="emptyInput" id="empty">Please complete the form</p>
+        <!-- <p hidden class="emptyInput" id="usernameEmpty">Please enter in an username</p>
+        <p hidden class="emptyInput" id="emailEmpty">Please enter in an email</p>
+        <p hidden class="emptyInput" id="passwordEmpty">Please enter in a password</p>
+        <p hidden class="emptyInput" id="confirmpasswordEmpty">Please confirm your password</p> -->
+
+        <!-- Hidden wrong inputs -->
+        <p hidden class="inCorrectInput" id="noStartCharacter">Username does not start with a letter</p>
+        <p hidden class="inCorrectInput" id="lessThanThreeLetters">Username is too short</p>
+        <p hidden class="inCorrectInput" id="NotEmail">Please input a valid Email</p>
+        <p hidden class="inCorrectInput" id="NotValid">Password should be 8 or more characters, contain at least one uppercase letter, one numeric digit, and one special character </p>
+        <p hidden class="inCorrectInput" id="passwordNoMatch">Please make sure passwords match</p>
+        <!-- username -->
+        <input 
+          class="reg-input"
+          type="text" 
+          name="username" 
+          placeholder="Username" 
+          id="regUsername"
+        />
+        
+
+        <!-- email -->
+        <input 
+          class="reg-input"
+          type="email" 
+          name="email" 
+          placeholder="Email" 
+          id="regEmail" 
+        />
+
+        <!-- password -->
+        <input 
+          class="reg-input"
+          type="password" 
+          name="password" 
+          placeholder="Password" 
+          id="regPassword"
+        />
+        <!-- confirm password -->
+        <input 
+          class="reg-input"
+          type="password" 
+          name="password" 
+          placeholder="Confirm Password" 
+          id="regPasswordConfirm"
+        />
+
+
+        <!-- not confirmed -->
+        <p hidden class="inCorrectInput" id="notAgeConfirmed">Please confirm you are at least 13 years old</p>
+        <!-- age confirm -->
+        <div class="age-confirm-div">
+          <label>I am at least 13 years old: </label>
+          <input type="radio" id="ageConfirm" />
+        </div>
+
+
+        <!-- not confirmed -->
+        <p hidden class="inCorrectInput" id="notAccepted">Please accept terms and privacy rules</p>
+        <!-- terms and service -->
+        <div class="terms-form">
+          Please accept
+          <a href="#">TOS</a>
+          and
+          <a href="#">Privacy Rules:</a>
+          <input type="radio" id="terms" />
+        </div>
+        
+        <!-- register button -->
+        <button class="reg-button" type="click">Register</button>
+        <!-- login link -->
+        <div class="login-link-div">
+          <a class="login-link" href="/login">Login</a>
+        </div>
+
+      </fieldset>
+    </form>
+    <script src="../public/JavaScript/registration.js"></script>
+
+  </body>
+</html>

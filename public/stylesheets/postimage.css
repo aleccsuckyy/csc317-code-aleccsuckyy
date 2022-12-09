@@ -1,0 +1,109 @@
+.post-form,
+.post-form * {
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro';
+}
+
+.post-header{
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333333;
+}
+
+.post-form{
+  max-width: 600px;
+  margin: 170px auto 15px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  background: #eeeeee;
+}
+
+.post-fieldset{
+  display: flex;
+  border: none;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.post-div{
+  justify-content: center;
+  width: 80%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#post-title,
+#post-Description-title{
+  text-align: center;
+  display: block;
+  font-size: 20px;
+}
+
+
+
+#post-title-input,
+
+#post-Description
+{
+  margin-bottom: 15px;
+  width: 90%;
+}
+
+#post-Description{
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+#post-title-input{
+  padding: 8px;
+}
+#post-Description,
+#post-title-input{
+  border-radius: 5px;
+}
+#post-Description:focus{
+  border-color: #009578;
+}
+#post-title-input:focus{
+  border-color: #009578;
+}
+
+/* file input */
+#file-input-div{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#file-input{
+  width: 40%;
+  margin-bottom: 20px;
+  text-align: center; 
+  align-items: center;
+}
+
+/* terms */
+.terms{
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+/* post button */
+#post-button{
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  background: #009578;
+  width: 35%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 25px;
+}
+#post-button:active{
+  background: #008067;
+}
